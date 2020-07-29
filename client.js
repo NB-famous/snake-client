@@ -25,9 +25,11 @@ const connect = () => {
     // Events: connect, message, error, end
     client.on('connect', function () {
         console.log('Succesfully connected to server');
-        //client.write("Name: NCB");
-        //client.write(message);
-        // catch what we type on the keyboard using standard input
+        client.write("Name: NCB");
+        
+        
+        
+        /*  ///Hard coded fuctionality////
         let moveList = ["Move: up", "Move: right","Move: up", "Move: up"]
         
         for(let i = 0; i < moveList.length; i++){
@@ -35,7 +37,8 @@ const connect = () => {
             setTimeout(() => {
                 client.write(moveList[i]);  
             }, 250*i) 
-        }
+        
+        } */
         
 
         
