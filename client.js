@@ -41,14 +41,12 @@ const connect = () => {
         } */
         
 
-        
-
     });
     return client;
   }
 
 
-module.exports = connect;
+module.exports = {connect};
 
 
 
