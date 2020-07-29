@@ -24,6 +24,7 @@ const connect = () => {
     }); 
 
     // Events: connect, message, error, end
+    
     client.on('connect', function () {
         console.log('Succesfully connected to server');
         //client.write("Name: NCB");

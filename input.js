@@ -1,24 +1,3 @@
-const {connect} = require('./client');
-let connection
-
-const getInput = function(message) {
-    //client.write(message);
-
-    switch(message){
-    case message === 'w':
-        client.write('Move: up');
-        break;
-    case message === 's':
-        client.write('Move: down');
-        break;
-    case message === 'd':
-        client.write('Move: rigth');
-        break;
-    case message === 'a':
-        client.write('Move: left');
-        break;
-    }
-}
 
 const setupInput = (client) => {
     const stdin = process.stdin;
@@ -47,6 +26,9 @@ const setupInput = (client) => {
         else if (key === 'a'){
             client.write('Move: left');
         }
+        else if (key === 'q'){
+            client.write('Say: HA!');
+        }
 
    });
    
@@ -54,4 +36,30 @@ const setupInput = (client) => {
 }
 
 module.exports = {setupInput};
+
+
+
+////Code use for reference /////
+
+//const {connect} = require('./client');
+//let connection
+
+/* const getInput = function(message) {
+    //client.write(message);
+
+    switch(message){
+    case message === 'w':
+        client.write('Move: up');
+        break;
+    case message === 's':
+        client.write('Move: down');
+        break;
+    case message === 'd':
+        client.write('Move: rigth');
+        break;
+    case message === 'a':
+        client.write('Move: left');
+        break;
+    }
+} */
 
