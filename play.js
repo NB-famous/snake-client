@@ -5,6 +5,7 @@ console.log('Connecting ...');
 
 //console.log(connect);
 connect();
+setupInput(connect());
 
 
 
