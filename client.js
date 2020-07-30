@@ -7,14 +7,14 @@
 */
 
 
+
+
 const net = require('net');
 const { stdin } = require('process');
+const {serverConfig} = require('./constants')
 
 const connect = () => {
-    const client = net.createConnection({ 
-      host: 'localhost',
-      port: 50541
-    });
+    const client = net.createConnection(serverConfig);
     // interpret incoming data as text
     client.setEncoding('utf8');
 
@@ -24,7 +24,7 @@ const connect = () => {
     }); 
 
     // Events: connect, message, error, end
-    
+
     client.on('connect', function () {
         console.log('Succesfully connected to server');
         //client.write("Name: NCB");
